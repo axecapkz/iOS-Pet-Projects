@@ -10,14 +10,14 @@ Simple app that shows work logic of Drop down menu
 
 ![Simulator Screen Recording - iPhone SE (3rd generation) - 2022-08-11 at 10 41 24](https://user-images.githubusercontent.com/3662112/184067475-cd411f86-4a74-4d5d-a850-efa35cd7a422.gif)
 
-#Simple app that generates random colors
+# Simple app that generates random colors
 
 - Implemented TableView
 - UIKit / Swift programmatically
 
 ![Simulator Screen Recording - iPhone SE (3rd generation) - 2022-08-11 at 22 55 08](https://user-images.githubusercontent.com/3662112/184191379-2f4495f5-ad95-4bad-8fa0-d4e260236e57.gif)
 
-#Simple Workout App. 
+# Simple Workout App. 
 App randomly generates deck of cards and you have Stop, Restart and Rules buttons. 
 Rules are simple, the value of each card represents the number of exercise you do.
 - UIKit / Swift programmatically
