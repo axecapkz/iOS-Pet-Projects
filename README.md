@@ -17,7 +17,9 @@ Simple app that shows work logic of Drop down menu
 
 ![Simulator Screen Recording - iPhone SE (3rd generation) - 2022-08-11 at 22 55 08](https://user-images.githubusercontent.com/3662112/184191379-2f4495f5-ad95-4bad-8fa0-d4e260236e57.gif)
 
-#Simple Workout App. App randomly generates deck of cards and you have Stop, Restart and Rules buttons. Rules are simple, the value of each card represents the number of exercise you do.
+#Simple Workout App. 
+App randomly generates deck of cards and you have Stop, Restart and Rules buttons. 
+Rules are simple, the value of each card represents the number of exercise you do.
 - UIKit / Swift programmatically
 
 ![Simulator Screen Recording - iPhone SE (3rd generation) - 2022-08-11 at 23 12 38](https://user-images.githubusercontent.com/3662112/184193699-21a4de89-fa0c-4ff2-a13d-b3b45ec21f28.gif)
