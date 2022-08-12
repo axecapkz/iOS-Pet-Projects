@@ -35,3 +35,6 @@ Rules are simple, the value of each card represents the number of exercise you d
 
 ![Simulator Screen Recording - iPhone 13 Pro - 2022-08-12 at 23 47 22](https://user-images.githubusercontent.com/3662112/184416805-fab3ca69-25dd-4454-be85-952cf599557c.gif)
 
+# Rick and Morty App (Still in development)
+
+![Simulator Screen Recording - iPhone 13 Pro - 2022-08-13 at 00 42 10](https://user-images.githubusercontent.com/3662112/184423423-de77172f-3c84-49b9-af94-275694c3b007.gif)
