@@ -23,3 +23,15 @@ Rules are simple, the value of each card represents the number of exercise you d
 - UIKit / Swift programmatically
 
 ![Simulator Screen Recording - iPhone SE (3rd generation) - 2022-08-11 at 23 12 38](https://user-images.githubusercontent.com/3662112/184193699-21a4de89-fa0c-4ff2-a13d-b3b45ec21f28.gif)
+
+# Developed programmatically 4 screens for NGO IT School "Terra". 
+## iOS Team size 10 developers.
+### In this project implemented scrollview, stackview and containerview
+
+- Main screen contains logo, name and 3 buttons
+- About Terra screen
+- Terra Algorithms screen
+- Terra Projects screen
+
+![Simulator Screen Recording - iPhone 13 Pro - 2022-08-12 at 23 47 22](https://user-images.githubusercontent.com/3662112/184416805-fab3ca69-25dd-4454-be85-952cf599557c.gif)
+
