@@ -50,4 +50,5 @@ Rules are simple, the value of each card represents the number of exercise you d
 # Tipsy App.
 App that calculate and split receipt depending on quantity of people.
 
+![Simulator Screen Recording - iPhone 13 Pro Max - 2022-08-18 at 22 49 13](https://user-images.githubusercontent.com/3662112/185468402-59e18916-aad4-42ac-a824-e96124af6bdd.gif)
 
