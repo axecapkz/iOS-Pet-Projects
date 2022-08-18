@@ -2,7 +2,7 @@
 //  CardDeck.swift
 //  CardWorkout-Programmatic
 //
-//  Created by Azamat Kenjebayev on 8/18/22.
+//  Created by Azamat Kenjebayev on 4/5/22.
 //
 
 import UIKit
@@ -66,3 +66,4 @@ struct CardDeck {
         UIImage(named: "AD")!
     ]
 }
+

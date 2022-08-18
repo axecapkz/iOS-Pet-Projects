@@ -2,13 +2,13 @@
 //  CWButton.swift
 //  CardWorkout-Programmatic
 //
-//  Created by Azamat Kenjebayev on 8/18/22.
+//  Created by Azamat Kenjebayev on 4/4/22.
 //
 
 import UIKit
 
 class CWButton: UIButton {
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -18,17 +18,18 @@ class CWButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(backgroundColor: UIColor, title: String) {
+    init(backgroundColor: UIColor, title: String){
         super.init(frame: .zero)
         self.backgroundColor = backgroundColor
         setTitle(title, for: .normal)
         configure()
     }
     
-    func configure() {
+    func configure(){
         layer.cornerRadius = 8
         titleLabel?.font = .systemFont(ofSize: 19, weight: .bold)
         setTitleColor(.white, for: .normal)
         translatesAutoresizingMaskIntoConstraints = false
     }
+
 }

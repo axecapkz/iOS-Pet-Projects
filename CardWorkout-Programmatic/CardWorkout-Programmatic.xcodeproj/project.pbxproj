@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8106013F28AE4F7600D48715 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106013E28AE4F7600D48715 /* AppDelegate.swift */; };
-		8106014128AE4F7600D48715 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106014028AE4F7600D48715 /* SceneDelegate.swift */; };
-		8106014328AE4F7600D48715 /* CardSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106014228AE4F7600D48715 /* CardSelectionVC.swift */; };
-		8106014828AE4F7900D48715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8106014728AE4F7900D48715 /* Assets.xcassets */; };
-		8106014B28AE4F7900D48715 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8106014928AE4F7900D48715 /* LaunchScreen.storyboard */; };
-		8106015328AE507E00D48715 /* CWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106015228AE507E00D48715 /* CWButton.swift */; };
-		8106015528AE50A100D48715 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106015428AE50A100D48715 /* CardDeck.swift */; };
-		8106015728AE50C600D48715 /* RulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8106015628AE50C600D48715 /* RulesVC.swift */; };
+		81A62A7727FB16D800C1F24B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A62A7627FB16D800C1F24B /* AppDelegate.swift */; };
+		81A62A7927FB16D800C1F24B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A62A7827FB16D800C1F24B /* SceneDelegate.swift */; };
+		81A62A8027FB16DA00C1F24B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A62A7F27FB16DA00C1F24B /* Assets.xcassets */; };
+		81A62A8327FB16DA00C1F24B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A62A8127FB16DA00C1F24B /* LaunchScreen.storyboard */; };
+		81A62A8B27FB67D900C1F24B /* CardSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A62A8A27FB67D900C1F24B /* CardSelectionVC.swift */; };
+		81A62A8D27FB692D00C1F24B /* CWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A62A8C27FB692D00C1F24B /* CWButton.swift */; };
+		81A62A8F27FB738200C1F24B /* RulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A62A8E27FB738200C1F24B /* RulesVC.swift */; };
+		81A62A9127FC1F4100C1F24B /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A62A9027FC1F4100C1F24B /* CardDeck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8106013B28AE4F7600D48715 /* CardWorkout-Programmatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CardWorkout-Programmatic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8106013E28AE4F7600D48715 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8106014028AE4F7600D48715 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8106014228AE4F7600D48715 /* CardSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionVC.swift; sourceTree = "<group>"; };
-		8106014728AE4F7900D48715 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8106014A28AE4F7900D48715 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8106014C28AE4F7900D48715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8106015228AE507E00D48715 /* CWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWButton.swift; sourceTree = "<group>"; };
-		8106015428AE50A100D48715 /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
-		8106015628AE50C600D48715 /* RulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesVC.swift; sourceTree = "<group>"; };
+		81A62A7327FB16D800C1F24B /* CardWorkout-Programmatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CardWorkout-Programmatic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A62A7627FB16D800C1F24B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81A62A7827FB16D800C1F24B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		81A62A7F27FB16DA00C1F24B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81A62A8227FB16DA00C1F24B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81A62A8427FB16DA00C1F24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81A62A8A27FB67D900C1F24B /* CardSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionVC.swift; sourceTree = "<group>"; };
+		81A62A8C27FB692D00C1F24B /* CWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWButton.swift; sourceTree = "<group>"; };
+		81A62A8E27FB738200C1F24B /* RulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesVC.swift; sourceTree = "<group>"; };
+		81A62A9027FC1F4100C1F24B /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8106013828AE4F7600D48715 /* Frameworks */ = {
+		81A62A7027FB16D800C1F24B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,34 +41,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8106013228AE4F7600D48715 = {
+		81A62A6A27FB16D800C1F24B = {
 			isa = PBXGroup;
 			children = (
-				8106013D28AE4F7600D48715 /* CardWorkout-Programmatic */,
-				8106013C28AE4F7600D48715 /* Products */,
+				81A62A7527FB16D800C1F24B /* CardWorkout-Programmatic */,
+				81A62A7427FB16D800C1F24B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8106013C28AE4F7600D48715 /* Products */ = {
+		81A62A7427FB16D800C1F24B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8106013B28AE4F7600D48715 /* CardWorkout-Programmatic.app */,
+				81A62A7327FB16D800C1F24B /* CardWorkout-Programmatic.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8106013D28AE4F7600D48715 /* CardWorkout-Programmatic */ = {
+		81A62A7527FB16D800C1F24B /* CardWorkout-Programmatic */ = {
 			isa = PBXGroup;
 			children = (
-				8106013E28AE4F7600D48715 /* AppDelegate.swift */,
-				8106014028AE4F7600D48715 /* SceneDelegate.swift */,
-				8106014228AE4F7600D48715 /* CardSelectionVC.swift */,
-				8106015628AE50C600D48715 /* RulesVC.swift */,
-				8106015428AE50A100D48715 /* CardDeck.swift */,
-				8106015228AE507E00D48715 /* CWButton.swift */,
-				8106014728AE4F7900D48715 /* Assets.xcassets */,
-				8106014928AE4F7900D48715 /* LaunchScreen.storyboard */,
-				8106014C28AE4F7900D48715 /* Info.plist */,
+				81A62A7627FB16D800C1F24B /* AppDelegate.swift */,
+				81A62A7827FB16D800C1F24B /* SceneDelegate.swift */,
+				81A62A8A27FB67D900C1F24B /* CardSelectionVC.swift */,
+				81A62A8E27FB738200C1F24B /* RulesVC.swift */,
+				81A62A9027FC1F4100C1F24B /* CardDeck.swift */,
+				81A62A8C27FB692D00C1F24B /* CWButton.swift */,
+				81A62A7F27FB16DA00C1F24B /* Assets.xcassets */,
+				81A62A8127FB16DA00C1F24B /* LaunchScreen.storyboard */,
+				81A62A8427FB16DA00C1F24B /* Info.plist */,
 			);
 			path = "CardWorkout-Programmatic";
 			sourceTree = "<group>";
@@ -76,13 +76,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8106013A28AE4F7600D48715 /* CardWorkout-Programmatic */ = {
+		81A62A7227FB16D800C1F24B /* CardWorkout-Programmatic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8106014F28AE4F7900D48715 /* Build configuration list for PBXNativeTarget "CardWorkout-Programmatic" */;
+			buildConfigurationList = 81A62A8727FB16DA00C1F24B /* Build configuration list for PBXNativeTarget "CardWorkout-Programmatic" */;
 			buildPhases = (
-				8106013728AE4F7600D48715 /* Sources */,
-				8106013828AE4F7600D48715 /* Frameworks */,
-				8106013928AE4F7600D48715 /* Resources */,
+				81A62A6F27FB16D800C1F24B /* Sources */,
+				81A62A7027FB16D800C1F24B /* Frameworks */,
+				81A62A7127FB16D800C1F24B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -90,25 +90,25 @@
 			);
 			name = "CardWorkout-Programmatic";
 			productName = "CardWorkout-Programmatic";
-			productReference = 8106013B28AE4F7600D48715 /* CardWorkout-Programmatic.app */;
+			productReference = 81A62A7327FB16D800C1F24B /* CardWorkout-Programmatic.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8106013328AE4F7600D48715 /* Project object */ = {
+		81A62A6B27FB16D800C1F24B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					8106013A28AE4F7600D48715 = {
-						CreatedOnToolsVersion = 13.4.1;
+					81A62A7227FB16D800C1F24B = {
+						CreatedOnToolsVersion = 13.3;
 					};
 				};
 			};
-			buildConfigurationList = 8106013628AE4F7600D48715 /* Build configuration list for PBXProject "CardWorkout-Programmatic" */;
+			buildConfigurationList = 81A62A6E27FB16D800C1F24B /* Build configuration list for PBXProject "CardWorkout-Programmatic" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,49 +116,49 @@
 				en,
 				Base,
 			);
-			mainGroup = 8106013228AE4F7600D48715;
-			productRefGroup = 8106013C28AE4F7600D48715 /* Products */;
+			mainGroup = 81A62A6A27FB16D800C1F24B;
+			productRefGroup = 81A62A7427FB16D800C1F24B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8106013A28AE4F7600D48715 /* CardWorkout-Programmatic */,
+				81A62A7227FB16D800C1F24B /* CardWorkout-Programmatic */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8106013928AE4F7600D48715 /* Resources */ = {
+		81A62A7127FB16D800C1F24B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8106014B28AE4F7900D48715 /* LaunchScreen.storyboard in Resources */,
-				8106014828AE4F7900D48715 /* Assets.xcassets in Resources */,
+				81A62A8327FB16DA00C1F24B /* LaunchScreen.storyboard in Resources */,
+				81A62A8027FB16DA00C1F24B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8106013728AE4F7600D48715 /* Sources */ = {
+		81A62A6F27FB16D800C1F24B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8106014328AE4F7600D48715 /* CardSelectionVC.swift in Sources */,
-				8106015528AE50A100D48715 /* CardDeck.swift in Sources */,
-				8106015728AE50C600D48715 /* RulesVC.swift in Sources */,
-				8106013F28AE4F7600D48715 /* AppDelegate.swift in Sources */,
-				8106014128AE4F7600D48715 /* SceneDelegate.swift in Sources */,
-				8106015328AE507E00D48715 /* CWButton.swift in Sources */,
+				81A62A9127FC1F4100C1F24B /* CardDeck.swift in Sources */,
+				81A62A7727FB16D800C1F24B /* AppDelegate.swift in Sources */,
+				81A62A8F27FB738200C1F24B /* RulesVC.swift in Sources */,
+				81A62A7927FB16D800C1F24B /* SceneDelegate.swift in Sources */,
+				81A62A8B27FB67D900C1F24B /* CardSelectionVC.swift in Sources */,
+				81A62A8D27FB692D00C1F24B /* CWButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8106014928AE4F7900D48715 /* LaunchScreen.storyboard */ = {
+		81A62A8127FB16DA00C1F24B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8106014A28AE4F7900D48715 /* Base */,
+				81A62A8227FB16DA00C1F24B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8106014D28AE4F7900D48715 /* Debug */ = {
+		81A62A8527FB16DA00C1F24B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -216,7 +216,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -226,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		8106014E28AE4F7900D48715 /* Release */ = {
+		81A62A8627FB16DA00C1F24B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,7 +280,7 @@
 			};
 			name = Release;
 		};
-		8106015028AE4F7900D48715 /* Debug */ = {
+		81A62A8827FB16DA00C1F24B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -292,9 +292,8 @@
 				INFOPLIST_FILE = "CardWorkout-Programmatic/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +303,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		8106015128AE4F7900D48715 /* Release */ = {
+		81A62A8927FB16DA00C1F24B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -320,9 +319,8 @@
 				INFOPLIST_FILE = "CardWorkout-Programmatic/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,32 +330,32 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8106013628AE4F7600D48715 /* Build configuration list for PBXProject "CardWorkout-Programmatic" */ = {
+		81A62A6E27FB16D800C1F24B /* Build configuration list for PBXProject "CardWorkout-Programmatic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8106014D28AE4F7900D48715 /* Debug */,
-				8106014E28AE4F7900D48715 /* Release */,
+				81A62A8527FB16DA00C1F24B /* Debug */,
+				81A62A8627FB16DA00C1F24B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8106014F28AE4F7900D48715 /* Build configuration list for PBXNativeTarget "CardWorkout-Programmatic" */ = {
+		81A62A8727FB16DA00C1F24B /* Build configuration list for PBXNativeTarget "CardWorkout-Programmatic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8106015028AE4F7900D48715 /* Debug */,
-				8106015128AE4F7900D48715 /* Release */,
+				81A62A8827FB16DA00C1F24B /* Debug */,
+				81A62A8927FB16DA00C1F24B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8106013328AE4F7600D48715 /* Project object */;
+	rootObject = 81A62A6B27FB16D800C1F24B /* Project object */;
 }

@@ -1,53 +1,56 @@
 //
-//  ViewController.swift
+//  CardSelectionVC.swift
 //  CardWorkout-Programmatic
 //
-//  Created by Azamat Kenjebayev on 8/18/22.
+//  Created by Azamat Kenjebayev on 4/4/22.
 //
 
 import UIKit
 
 class CardSelectionVC: UIViewController {
     
-    let cardImageView   = UIImageView()
+    let cardImageView = UIImageView()
     let stopButton      = CWButton(backgroundColor: .systemRed, title: "Stop!")
-    let resetButton     = CWButton(backgroundColor: .systemGreen, title: "Reset")
+    let restartButton   = CWButton(backgroundColor: .systemGreen, title: "Restart")
     let rulesButton     = CWButton(backgroundColor: .systemBlue, title: "Rules")
     
-    var cards           = CardDeck.allValues
+    var cards: [UIImage] = CardDeck.allValues
     var timer: Timer!
+    
+//    var buttonTapped: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureUI()
         startTimer()
-    }
-    
-    func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(showRandomCard), userInfo: nil, repeats: true)
-    }
-    
-    @objc func stopTimer() {
-        timer.invalidate()
-    }
-    
-    @objc func resetTimer() {
-        startTimer()
-    }
-    
-    @objc func showRandomCard() {
-        cardImageView.image = cards.randomElement()
-    }
-    
-    func configureUI() {
-        configureCardImageView()
         configureStopButton()
-        configureResetButton()
+        configureRestartButton()
         configureRulesButton()
     }
     
-    func configureCardImageView() {
+    func startTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(showRandomImage), userInfo: nil, repeats: true)
+    }
+    
+    @objc func stopTimer(){
+        timer.invalidate()
+    }
+    
+    @objc func restartTimer(){
+        stopTimer()
+        startTimer()
+    }
+    
+    @objc func showRandomImage(){
+        cardImageView.image = cards.randomElement() ?? UIImage(named: "AS")
+    }
+    
+    func configureUI(){
+        configureCardImageView()
+    }
+    
+    func configureCardImageView(){
         view.addSubview(cardImageView)
         cardImageView.translatesAutoresizingMaskIntoConstraints = false
         cardImageView.image = UIImage(named: "AS")
@@ -60,7 +63,7 @@ class CardSelectionVC: UIViewController {
         ])
     }
     
-    func configureStopButton() {
+    func configureStopButton(){
         view.addSubview(stopButton)
         stopButton.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
         
@@ -72,19 +75,20 @@ class CardSelectionVC: UIViewController {
         ])
     }
     
-    func configureResetButton() {
-        view.addSubview(resetButton)
-        resetButton.addTarget(self, action: #selector(resetTimer), for: .touchUpInside)
+    func configureRestartButton(){
+        view.addSubview(restartButton)
+        
+        restartButton.addTarget(self, action: #selector(restartTimer), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
-            resetButton.widthAnchor.constraint(equalToConstant: 115),
-            resetButton.heightAnchor.constraint(equalToConstant: 50),
-            resetButton.leadingAnchor.constraint(equalTo: stopButton.leadingAnchor),
-            resetButton.topAnchor.constraint(equalTo: stopButton.bottomAnchor, constant: 20)
+            restartButton.widthAnchor.constraint(equalToConstant: 115),
+            restartButton.heightAnchor.constraint(equalToConstant: 50),
+            restartButton.leadingAnchor.constraint(equalTo: stopButton.leadingAnchor),
+            restartButton.topAnchor.constraint(equalTo: stopButton.bottomAnchor, constant: 20)
         ])
     }
     
-    func configureRulesButton() {
+    func configureRulesButton(){
         view.addSubview(rulesButton)
         rulesButton.addTarget(self, action: #selector(presentRulesVC), for: .touchUpInside)
         
@@ -96,7 +100,7 @@ class CardSelectionVC: UIViewController {
         ])
     }
     
-    @objc func presentRulesVC() {
+    @objc func presentRulesVC(){
         present(RulesVC(), animated: true)
     }
 }
