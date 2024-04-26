@@ -35,15 +35,11 @@ class WelcomeViewController: UIViewController {
         button.backgroundColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-//        button.addAction(.init(handler: {_ in
-//            self.buttonPressed()
-//        }), for: .touchUpInside)
         return button
     }()
     
     @objc func buttonPressed() {
         let nextVC = BookmarksViewController()
-//        let nextVC = UINavigationController(rootViewController: SecondScreenVC())
         nextVC.modalPresentationStyle = .fullScreen
         navigationController?.present(nextVC, animated: true)
     }
