@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LinkModel {
+class LinkModel: Codable {
     var title: String
     var link: String
     

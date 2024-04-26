@@ -6,12 +6,11 @@
 //
 
 import UIKit
+import WebKit
 
-
-
-class BookmarksViewController: UIViewController {
+class SecondScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private var links: [LinkModel] = []
+    private var links: [LinkModel] = LinkStorage.linkModels
     
     private var topLabel: UILabel = {
     let label = UILabel()
@@ -64,6 +63,7 @@ class BookmarksViewController: UIViewController {
     
     private func addLink(title: String, link: String) {
         self.links.append(LinkModel(title: title, link: link))
+        LinkStorage.linkModels.append(LinkModel(title: title, link: link))
         self.tableView.reloadData()
         checkLinks()
     }
@@ -101,6 +101,10 @@ class BookmarksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
+    }
+    
+    func setupViews() {
         checkLinks()
         view.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 238/255, alpha: 1)
         [topLabel, mainLabel, addedLabel, addButton, tableView].forEach {
@@ -116,7 +120,6 @@ class BookmarksViewController: UIViewController {
         view.addSubview(tableView)
         setContraints()
     }
-    
 
     func setContraints() {
         topLabel.snp.makeConstraints { make in
@@ -153,13 +156,14 @@ class BookmarksViewController: UIViewController {
     }
 }
 
-extension BookmarksViewController: UITableViewDelegate, UITableViewDataSource {
+extension SecondScreenVC: CustomTableViewCellDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.links.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Links", for: indexPath) as? CustomTableViewCell else {return UITableViewCell()}
+        cell.delegate = self
         cell.configure(name: links[indexPath.row])
         return cell
     }
@@ -167,10 +171,17 @@ extension BookmarksViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             links.remove(at: indexPath.row)
+            LinkStorage.linkModels.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
             checkLinks()
         }
+    }
+    
+    func openLink(_ url: URL) {
+        let webVC = WebViewController()
+        webVC.url = url
+        navigationController?.pushViewController(webVC, animated: true)
     }
 }
 

@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class WelcomeViewController: UIViewController {
+class ViewController: UIViewController {
     
     private var bgImage: UIImageView = {
         let image = UIImageView()
@@ -42,7 +42,7 @@ class WelcomeViewController: UIViewController {
     }()
     
     @objc func buttonPressed() {
-        let nextVC = BookmarksViewController()
+        let nextVC = SecondScreenVC()
 //        let nextVC = UINavigationController(rootViewController: SecondScreenVC())
         nextVC.modalPresentationStyle = .fullScreen
         navigationController?.present(nextVC, animated: true)

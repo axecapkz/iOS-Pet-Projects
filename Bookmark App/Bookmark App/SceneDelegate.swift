@@ -16,7 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         window.makeKeyAndVisible()
-        window.rootViewController = UINavigationController(rootViewController: WelcomeViewController())
+        if LinkStorage.linkModels.isEmpty{
+            window.rootViewController = UINavigationController(rootViewController: ViewController())
+        } else {
+            window.rootViewController = UINavigationController(rootViewController: SecondScreenVC())
+        }
         self.window = window
     }
 

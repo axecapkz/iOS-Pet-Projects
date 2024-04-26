@@ -8,7 +8,13 @@
 import UIKit
 import SnapKit
 
+protocol CustomTableViewCellDelegate: AnyObject {
+    func openLink(_ url: URL)
+}
+
 class CustomTableViewCell: UITableViewCell {
+    
+    weak var delegate: CustomTableViewCellDelegate?
     
     private var arrowImage: UIButton = {
         let button = UIButton()
@@ -41,9 +47,9 @@ class CustomTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super .init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundColor = UIColor(displayP3Red: 242/255, green: 242/255, blue: 238/255, alpha: 1)
+        backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 238/255, alpha: 1)
         contentView.addSubview(arrowImage)
-        addSubview(nameLabel)
+        contentView.addSubview(nameLabel)
         setConstraints()
     }
     
@@ -52,16 +58,17 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     private func setConstraints() {
+        nameLabel.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalTo(arrowImage.snp.leading).offset(-10)
+            make.centerY.equalToSuperview()
+        }
+        
         arrowImage.snp.makeConstraints { make in
             make.width.equalTo(18)
             make.height.equalTo(32)
             make.right.equalToSuperview().offset(-18)
-            make.bottom.equalToSuperview().offset(-18)
-        }
-
-        nameLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(16)
-            make.trailing.equalToSuperview().offset(-11)
+            make.centerY.equalToSuperview()
         }
     }
     
@@ -75,7 +82,8 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     private func openURL() {
-        guard let url = URL(string: "https://\(linkLabel.text!)") else {return}
-        UIApplication.shared.open(url)
+        if let urlString = linkLabel.text, let url = URL(string: "https://" + urlString) {
+            delegate?.openLink(url)
+        }
     }
 }
