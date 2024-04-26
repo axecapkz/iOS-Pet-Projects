@@ -10,6 +10,8 @@ This app is designed to display Crypto Coin Currencies, using the Alamofire fram
 # Bookmarks App
 This app allows you to save any liked links with custom titles. If you want, you can open the links in the webview with a simple click.
 
+![Simulator Screen Recording - iPhone 15 Pro - 2024-04-26 at 12 16 47](https://github.com/axecapkz/iOS-Pet-Projects/assets/3662112/bc452c57-4865-49e3-b55d-756b26457c9e)
+
 
 
 # Delegate-Protocols
