@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E254DB8F4C71BCB9C12D412 /* Pods_Bookmark_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9127448B919083AE4DEFE35 /* Pods_Bookmark_App.framework */; };
 		817BC55A2BD1BCE000C21328 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC5592BD1BCE000C21328 /* AppDelegate.swift */; };
 		817BC55C2BD1BCE000C21328 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC55B2BD1BCE000C21328 /* SceneDelegate.swift */; };
 		817BC55E2BD1BCE000C21328 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC55D2BD1BCE000C21328 /* WelcomeViewController.swift */; };
@@ -14,14 +15,14 @@
 		817BC5662BD1BCE300C21328 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 817BC5652BD1BCE300C21328 /* Base */; };
 		817BC5702BD1BD5700C21328 /* LinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC56F2BD1BD5700C21328 /* LinkModel.swift */; };
 		817BC5722BD1BD8D00C21328 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC5712BD1BD8C00C21328 /* CustomTableViewCell.swift */; };
-		817BC5752BD1BDA300C21328 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 817BC5742BD1BDA300C21328 /* SnapKit */; };
-		817BC5772BD1BDA300C21328 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 817BC5762BD1BDA300C21328 /* SnapKit-Dynamic */; };
 		817BC5792BD1BDBB00C21328 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC5782BD1BDBA00C21328 /* BookmarksViewController.swift */; };
 		81B8549F2BD2900800A4DC24 /* LinkStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B8549E2BD2900800A4DC24 /* LinkStorage.swift */; };
 		81B854A12BD2901500A4DC24 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B854A02BD2901500A4DC24 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0014103FEF67D90CC7C97411 /* Pods-Bookmark App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookmark App.release.xcconfig"; path = "Target Support Files/Pods-Bookmark App/Pods-Bookmark App.release.xcconfig"; sourceTree = "<group>"; };
+		083BA1749FF4282E7B4FC8C4 /* Pods-Bookmark App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookmark App.debug.xcconfig"; path = "Target Support Files/Pods-Bookmark App/Pods-Bookmark App.debug.xcconfig"; sourceTree = "<group>"; };
 		817BC5562BD1BCE000C21328 /* Bookmark App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bookmark App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		817BC5592BD1BCE000C21328 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		817BC55B2BD1BCE000C21328 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +35,7 @@
 		817BC5782BD1BDBA00C21328 /* BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		81B8549E2BD2900800A4DC24 /* LinkStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkStorage.swift; sourceTree = "<group>"; };
 		81B854A02BD2901500A4DC24 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B9127448B919083AE4DEFE35 /* Pods_Bookmark_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bookmark_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,8 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				817BC5752BD1BDA300C21328 /* SnapKit in Frameworks */,
-				817BC5772BD1BDA300C21328 /* SnapKit-Dynamic in Frameworks */,
+				7E254DB8F4C71BCB9C12D412 /* Pods_Bookmark_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +73,8 @@
 			children = (
 				817BC5582BD1BCE000C21328 /* Bookmark App */,
 				817BC5572BD1BCE000C21328 /* Products */,
+				9B22B61B6B70A3CC296654BD /* Pods */,
+				A6E6403C76A605C516D26408 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +102,23 @@
 			path = "Bookmark App";
 			sourceTree = "<group>";
 		};
+		9B22B61B6B70A3CC296654BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				083BA1749FF4282E7B4FC8C4 /* Pods-Bookmark App.debug.xcconfig */,
+				0014103FEF67D90CC7C97411 /* Pods-Bookmark App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A6E6403C76A605C516D26408 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9127448B919083AE4DEFE35 /* Pods_Bookmark_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,19 +126,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 817BC56A2BD1BCE300C21328 /* Build configuration list for PBXNativeTarget "Bookmark App" */;
 			buildPhases = (
+				308229343EA59C297244843B /* [CP] Check Pods Manifest.lock */,
 				817BC5522BD1BCE000C21328 /* Sources */,
 				817BC5532BD1BCE000C21328 /* Frameworks */,
 				817BC5542BD1BCE000C21328 /* Resources */,
+				0CDEADB68DE6E433716BB7A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Bookmark App";
-			packageProductDependencies = (
-				817BC5742BD1BDA300C21328 /* SnapKit */,
-				817BC5762BD1BDA300C21328 /* SnapKit-Dynamic */,
-			);
 			productName = "Bookmark App";
 			productReference = 817BC5562BD1BCE000C21328 /* Bookmark App.app */;
 			productType = "com.apple.product-type.application";
@@ -170,6 +188,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CDEADB68DE6E433716BB7A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bookmark App/Pods-Bookmark App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bookmark App/Pods-Bookmark App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bookmark App/Pods-Bookmark App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		308229343EA59C297244843B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bookmark App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		817BC5522BD1BCE000C21328 /* Sources */ = {
@@ -322,12 +382,14 @@
 		};
 		817BC56B2BD1BCE300C21328 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 083BA1749FF4282E7B4FC8C4 /* Pods-Bookmark App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XYU6KDT69V;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bookmark App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -349,12 +411,14 @@
 		};
 		817BC56C2BD1BCE300C21328 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0014103FEF67D90CC7C97411 /* Pods-Bookmark App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XYU6KDT69V;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bookmark App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -407,19 +471,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		817BC5742BD1BDA300C21328 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 817BC5732BD1BDA300C21328 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		817BC5762BD1BDA300C21328 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 817BC5732BD1BDA300C21328 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 817BC54E2BD1BCE000C21328 /* Project object */;
 }
