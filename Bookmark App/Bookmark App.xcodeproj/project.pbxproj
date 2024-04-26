@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		817BC55A2BD1BCE000C21328 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC5592BD1BCE000C21328 /* AppDelegate.swift */; };
 		817BC55C2BD1BCE000C21328 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC55B2BD1BCE000C21328 /* SceneDelegate.swift */; };
-		817BC55E2BD1BCE000C21328 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC55D2BD1BCE000C21328 /* ViewController.swift */; };
+		817BC55E2BD1BCE000C21328 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC55D2BD1BCE000C21328 /* WelcomeViewController.swift */; };
 		817BC5632BD1BCE300C21328 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817BC5622BD1BCE300C21328 /* Assets.xcassets */; };
 		817BC5662BD1BCE300C21328 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 817BC5652BD1BCE300C21328 /* Base */; };
 		817BC5702BD1BD5700C21328 /* LinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC56F2BD1BD5700C21328 /* LinkModel.swift */; };
 		817BC5722BD1BD8D00C21328 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC5712BD1BD8C00C21328 /* CustomTableViewCell.swift */; };
 		817BC5752BD1BDA300C21328 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 817BC5742BD1BDA300C21328 /* SnapKit */; };
 		817BC5772BD1BDA300C21328 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 817BC5762BD1BDA300C21328 /* SnapKit-Dynamic */; };
-		817BC5792BD1BDBB00C21328 /* SecondScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC5782BD1BDBA00C21328 /* SecondScreenVC.swift */; };
+		817BC5792BD1BDBB00C21328 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BC5782BD1BDBA00C21328 /* BookmarksViewController.swift */; };
 		81B8549F2BD2900800A4DC24 /* LinkStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B8549E2BD2900800A4DC24 /* LinkStorage.swift */; };
 		81B854A12BD2901500A4DC24 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B854A02BD2901500A4DC24 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
@@ -25,13 +25,13 @@
 		817BC5562BD1BCE000C21328 /* Bookmark App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bookmark App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		817BC5592BD1BCE000C21328 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		817BC55B2BD1BCE000C21328 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		817BC55D2BD1BCE000C21328 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		817BC55D2BD1BCE000C21328 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		817BC5622BD1BCE300C21328 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		817BC5652BD1BCE300C21328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		817BC5672BD1BCE300C21328 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		817BC56F2BD1BD5700C21328 /* LinkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkModel.swift; sourceTree = "<group>"; };
 		817BC5712BD1BD8C00C21328 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		817BC5782BD1BDBA00C21328 /* SecondScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondScreenVC.swift; sourceTree = "<group>"; };
+		817BC5782BD1BDBA00C21328 /* BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		81B8549E2BD2900800A4DC24 /* LinkStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkStorage.swift; sourceTree = "<group>"; };
 		81B854A02BD2901500A4DC24 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		811E64DA2BDB7BD50012645C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				817BC55D2BD1BCE000C21328 /* WelcomeViewController.swift */,
+				817BC5782BD1BDBA00C21328 /* BookmarksViewController.swift */,
+				81B854A02BD2901500A4DC24 /* WebViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		811E64DB2BDB7BF50012645C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				817BC56F2BD1BD5700C21328 /* LinkModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		817BC54D2BD1BCE000C21328 = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +88,10 @@
 			children = (
 				817BC5592BD1BCE000C21328 /* AppDelegate.swift */,
 				817BC55B2BD1BCE000C21328 /* SceneDelegate.swift */,
-				817BC55D2BD1BCE000C21328 /* ViewController.swift */,
-				817BC5782BD1BDBA00C21328 /* SecondScreenVC.swift */,
-				817BC56F2BD1BD5700C21328 /* LinkModel.swift */,
 				81B8549E2BD2900800A4DC24 /* LinkStorage.swift */,
 				817BC5712BD1BD8C00C21328 /* CustomTableViewCell.swift */,
-				81B854A02BD2901500A4DC24 /* WebViewController.swift */,
+				811E64DA2BDB7BD50012645C /* Views */,
+				811E64DB2BDB7BF50012645C /* Model */,
 				817BC5622BD1BCE300C21328 /* Assets.xcassets */,
 				817BC5642BD1BCE300C21328 /* LaunchScreen.storyboard */,
 				817BC5672BD1BCE300C21328 /* Info.plist */,
@@ -163,9 +179,9 @@
 				81B8549F2BD2900800A4DC24 /* LinkStorage.swift in Sources */,
 				817BC5702BD1BD5700C21328 /* LinkModel.swift in Sources */,
 				817BC5722BD1BD8D00C21328 /* CustomTableViewCell.swift in Sources */,
-				817BC55E2BD1BCE000C21328 /* ViewController.swift in Sources */,
+				817BC55E2BD1BCE000C21328 /* WelcomeViewController.swift in Sources */,
 				817BC55A2BD1BCE000C21328 /* AppDelegate.swift in Sources */,
-				817BC5792BD1BDBB00C21328 /* SecondScreenVC.swift in Sources */,
+				817BC5792BD1BDBB00C21328 /* BookmarksViewController.swift in Sources */,
 				817BC55C2BD1BCE000C21328 /* SceneDelegate.swift in Sources */,
 				81B854A12BD2901500A4DC24 /* WebViewController.swift in Sources */,
 			);

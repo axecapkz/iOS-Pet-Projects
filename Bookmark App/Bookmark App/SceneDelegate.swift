@@ -17,9 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         window.makeKeyAndVisible()
         if LinkStorage.linkModels.isEmpty{
-            window.rootViewController = UINavigationController(rootViewController: ViewController())
+            window.rootViewController = UINavigationController(rootViewController: WelcomeViewController())
         } else {
-            window.rootViewController = UINavigationController(rootViewController: SecondScreenVC())
+            window.rootViewController = UINavigationController(rootViewController: BookmarksViewController())
         }
         self.window = window
     }

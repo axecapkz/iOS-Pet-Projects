@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class SecondScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BookmarksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     private var links: [LinkModel] = LinkStorage.linkModels
     
@@ -156,7 +156,7 @@ class SecondScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 }
 
-extension SecondScreenVC: CustomTableViewCellDelegate {
+extension BookmarksViewController: CustomTableViewCellDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.links.count
     }
