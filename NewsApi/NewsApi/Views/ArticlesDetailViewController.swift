@@ -16,12 +16,15 @@ class ArticlesDetailViewController: UIViewController {
         label.textAlignment = .justified
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
     private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
@@ -34,7 +37,6 @@ class ArticlesDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-
         setupUI()
     }
 
@@ -44,8 +46,12 @@ class ArticlesDetailViewController: UIViewController {
         }
 
         titleLabel.text = article.title
-        descriptionLabel.text = article.description
         imageView.contentMode = .scaleAspectFit
+
+        if let descriptionText = article.description {
+            let attributedString = NSAttributedString(string: descriptionText)
+            descriptionLabel.attributedText = attributedString
+        }
 
         view.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
