@@ -9,7 +9,20 @@ import UIKit
 import SnapKit
 
 class ArticlesDetailViewController: UIViewController {
+
     var article: ArticleListModel?
+
+    private let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        return scrollView
+    }()
+
+    private let contentView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -46,30 +59,36 @@ class ArticlesDetailViewController: UIViewController {
         }
 
         titleLabel.text = article.title
-        imageView.contentMode = .scaleAspectFit
+        descriptionLabel.text = article.description
 
-        if let descriptionText = article.description {
-            let attributedString = NSAttributedString(string: descriptionText)
-            descriptionLabel.attributedText = attributedString
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
 
-        view.addSubview(titleLabel)
+        scrollView.addSubview(contentView)
+        contentView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+            make.width.equalTo(view)
+        }
+
+        contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            make.top.equalTo(contentView.safeAreaLayoutGuide).offset(20)
             make.leading.trailing.equalToSuperview().inset(20)
         }
         
-        view.addSubview(imageView)
+        contentView.addSubview(imageView)
         imageView.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(15)
             make.leading.trailing.equalToSuperview().inset(8)
         }
         
-        view.addSubview(descriptionLabel)
+        contentView.addSubview(descriptionLabel)
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(imageView.snp.bottom).offset(15)
             make.leading.trailing.equalToSuperview().inset(20)
-            make.bottom.lessThanOrEqualTo(view.safeAreaLayoutGuide).offset(-20)
+            make.bottom.lessThanOrEqualTo(contentView.safeAreaLayoutGuide).offset(-20)
         }
 
         if let urlString = article.urlToImage, let url = URL(string: urlString) {

@@ -17,17 +17,10 @@ class NetworkManager {
     func fetchData(completion: @escaping ([ArticleListModel]?, Error?) -> Void) {
         let url = "\(baseURL)\(endpoint)"
         
-        AF.request(url).responseJSON { response in
+        AF.request(url).responseDecodable(of: Articles.self) { response in
             switch response.result {
-            case .success(let news):
-                print("JSON Response: \(news)")
-                do {
-                    let articles = try JSONDecoder().decode(Articles.self, from: response.data!)
-                    completion(articles.articles, nil)
-                } catch let error {
-                    print("Decoding error: \(error)")
-                    completion(nil, error)
-                }
+            case .success(let articlesResponse):
+                completion(articlesResponse.articles, nil)
             case .failure(let error):
                 print("Error fetching articles: \(error.localizedDescription)")
                 completion(nil, error)
