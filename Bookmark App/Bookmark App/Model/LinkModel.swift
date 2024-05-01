@@ -7,12 +7,12 @@
 
 import Foundation
 
-class LinkModel: Codable {
+struct LinkModel: Codable {
     var title: String
     var link: String
-    
-    init(title: String, link: String) {
-        self.title = title
-        self.link = link
+    var imageUrl: String
+
+    private enum CodingKeys: String, CodingKey {
+        case title, link, imageUrl
     }
 }

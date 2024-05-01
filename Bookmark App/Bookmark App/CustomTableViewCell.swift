@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SnapKit
+import SDWebImage
 
 protocol CustomTableViewCellDelegate: AnyObject {
     func openLink(_ url: URL)
@@ -16,17 +16,12 @@ class CustomTableViewCell: UITableViewCell {
     
     weak var delegate: CustomTableViewCellDelegate?
     
-    private var arrowImage: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "arrow"), for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(openLink), for: .touchUpInside)
-        return button
+    private var arrowImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
-    
-    @objc func openLink() {
-        openURL()
-    }
     
     private var nameLabel: UILabel = {
         let label = UILabel()
@@ -41,12 +36,8 @@ class CustomTableViewCell: UITableViewCell {
         return label
     }()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super .init(style: style, reuseIdentifier: reuseIdentifier)
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 238/255, alpha: 1)
         contentView.addSubview(arrowImage)
         contentView.addSubview(nameLabel)
@@ -72,13 +63,20 @@ class CustomTableViewCell: UITableViewCell {
         }
     }
     
+    func configure(name: LinkModel) {
+        nameLabel.text = name.title
+        linkLabel.text = name.link
+        if let imageUrl = URL(string: name.imageUrl) {
+            arrowImage.sd_setImage(with: imageUrl, placeholderImage: UIImage(named: "default_placeholder"))
+        }
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    func configure(name: LinkModel) {
-        nameLabel.text = name.title
-        linkLabel.text = name.link
+    @objc func openLink() {
+        openURL()
     }
     
     private func openURL() {

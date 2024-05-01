@@ -7,5 +7,6 @@ target 'Bookmark App' do
 
   # Pods for Bookmark App
 pod 'SnapKit', '~> 5.7.0'
+pod 'SDWebImage'
 
 end

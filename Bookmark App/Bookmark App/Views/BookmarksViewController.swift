@@ -61,9 +61,9 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         return tableView
     }()
     
-    private func addLink(title: String, link: String) {
-        self.links.append(LinkModel(title: title, link: link))
-        LinkStorage.linkModels.append(LinkModel(title: title, link: link))
+    private func addLink(title: String, link: String, imageURL: String) {
+        self.links.append(LinkModel(title: title, link: link, imageUrl: imageURL))
+        LinkStorage.linkModels.append(LinkModel(title: title, link: link, imageUrl: imageURL))
         self.tableView.reloadData()
         checkLinks()
     }
@@ -85,7 +85,8 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         let action = UIAlertAction(title: "Save", style: .default) {_ in
             guard let title = alert.textFields?[0].text, title != "" else {return}
             guard let link = alert.textFields?[1].text, link != "" else {return}
-            self.addLink(title: title, link: link)
+            guard let imageUrl = alert.textFields?[2].text else { return }
+            self.addLink(title: title, link: link, imageURL: imageUrl)
         }
         alert.addTextField { (title) in
             title.placeholder = "Bookmark Title"}
