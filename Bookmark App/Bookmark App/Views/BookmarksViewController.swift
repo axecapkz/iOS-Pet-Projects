@@ -40,7 +40,7 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         return label
     }()
     
-    private var addButton: UIButton = {
+    private lazy var addButton: UIButton = {
         let button = UIButton()
         button.setTitle("Add bookmark", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -61,9 +61,9 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         return tableView
     }()
     
-    private func addLink(title: String, link: String, imageURL: String) {
-        self.links.append(LinkModel(title: title, link: link, imageUrl: imageURL))
-        LinkStorage.linkModels.append(LinkModel(title: title, link: link, imageUrl: imageURL))
+    private func addLink(title: String, link: String) {
+        self.links.append(LinkModel(title: title, link: link))
+        LinkStorage.linkModels.append(LinkModel(title: title, link: link))
         self.tableView.reloadData()
         checkLinks()
     }
@@ -85,8 +85,7 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         let action = UIAlertAction(title: "Save", style: .default) {_ in
             guard let title = alert.textFields?[0].text, title != "" else {return}
             guard let link = alert.textFields?[1].text, link != "" else {return}
-            guard let imageUrl = alert.textFields?[2].text else { return }
-            self.addLink(title: title, link: link, imageURL: imageUrl)
+            self.addLink(title: title, link: link)
         }
         alert.addTextField { (title) in
             title.placeholder = "Bookmark Title"}

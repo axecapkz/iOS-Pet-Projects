@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+import SnapKit
 
 protocol CustomTableViewCellDelegate: AnyObject {
     func openLink(_ url: URL)
@@ -18,6 +18,7 @@ class CustomTableViewCell: UITableViewCell {
     
     private var arrowImage: UIImageView = {
         let imageView = UIImageView()
+        imageView.image = UIImage(named: "arrow")
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -30,11 +31,7 @@ class CustomTableViewCell: UITableViewCell {
         return label
     }()
     
-    private var linkLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private var linkModel: LinkModel?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -42,6 +39,9 @@ class CustomTableViewCell: UITableViewCell {
         contentView.addSubview(arrowImage)
         contentView.addSubview(nameLabel)
         setConstraints()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped))
+        contentView.addGestureRecognizer(tapGesture)
     }
     
     required init?(coder: NSCoder) {
@@ -65,22 +65,11 @@ class CustomTableViewCell: UITableViewCell {
     
     func configure(name: LinkModel) {
         nameLabel.text = name.title
-        linkLabel.text = name.link
-        if let imageUrl = URL(string: name.imageUrl) {
-            arrowImage.sd_setImage(with: imageUrl, placeholderImage: UIImage(named: "default_placeholder"))
-        }
+        linkModel = name
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    @objc func openLink() {
-        openURL()
-    }
-    
-    private func openURL() {
-        if let urlString = linkLabel.text, let url = URL(string: "https://" + urlString) {
+    @objc func cellTapped() {
+        if let urlString = linkModel?.link, let url = URL(string: "https://" + urlString) {
             delegate?.openLink(url)
         }
     }

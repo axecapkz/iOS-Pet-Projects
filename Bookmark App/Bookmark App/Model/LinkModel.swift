@@ -10,9 +10,8 @@ import Foundation
 struct LinkModel: Codable {
     var title: String
     var link: String
-    var imageUrl: String
 
     private enum CodingKeys: String, CodingKey {
-        case title, link, imageUrl
+        case title, link
     }
 }

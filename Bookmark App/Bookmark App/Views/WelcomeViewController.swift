@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController {
         return image
     }()
     
-    private var label: UILabel = {
+    private lazy var label: UILabel = {
         let label = UILabel()
         label.text = "Save all interesting links in one app"
         label.font = UIFont.systemFont(ofSize: 36, weight: .bold)
@@ -27,7 +27,7 @@ class WelcomeViewController: UIViewController {
         return label
     }()
     
-    private var button: UIButton = {
+    private lazy var button: UIButton = {
         let button = UIButton()
         button.setTitle("Let’s start collecting", for: .normal)
         button.setTitleColor(.black, for: .normal)
