@@ -26,6 +26,7 @@ class ArticlesDetailViewController: UIViewController {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
+        label.text = ""
         label.textAlignment = .justified
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.numberOfLines = 0
