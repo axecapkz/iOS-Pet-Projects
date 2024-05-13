@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import AlamofireImage
 
 class CustomTableViewCell: UITableViewCell {
     
@@ -45,6 +46,17 @@ class CustomTableViewCell: UITableViewCell {
             make.top.equalTo(articleLabel.snp.bottom).offset(8)
             make.leading.trailing.bottom.equalToSuperview().inset(16)
             make.height.equalTo(150)
+        }
+    }
+    
+    func configure(with article: ArticleListModel) {
+        articleLabel.text = article.title
+        articleImage.image = nil
+        
+        if let urlString = article.urlToImage, let url = URL(string: urlString) {
+            articleImage.af.setImage(withURL: url)
+        } else {
+            articleImage.image = UIImage(named: "placeholder_image")
         }
     }
 }

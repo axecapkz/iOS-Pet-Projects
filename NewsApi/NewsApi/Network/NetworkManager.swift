@@ -12,7 +12,7 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     private let baseURL = "https://newsapi.org/v2"
-    private let endpoint = "/everything?q=tesla&from=2024-04-01&sortBy=publishedAt&apiKey=3a1615c53f7c4e3fa5d042887f318502"
+    private let endpoint = "/everything?q=tesla&from=2024-04-13&sortBy=publishedAt&apiKey=3a1615c53f7c4e3fa5d042887f318502"
     
     func fetchData(completion: @escaping ([ArticleListModel]?, Error?) -> Void) {
         let url = "\(baseURL)\(endpoint)"

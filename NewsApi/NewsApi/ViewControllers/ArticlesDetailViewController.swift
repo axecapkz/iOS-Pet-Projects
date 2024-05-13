@@ -7,47 +7,30 @@
 
 import UIKit
 import SnapKit
+import AlamofireImage
 
 class ArticlesDetailViewController: UIViewController {
-
+    
+    private let viewModel: ArticlesDetailViewModel
     var article: ArticleListModel?
 
-    private let scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        return scrollView
-    }()
+    private let scrollView = UIScrollView()
 
-    private let contentView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = ""
-        label.textAlignment = .justified
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    private let descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    private let imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        return imageView
-    }()
-
+    private let contentView = UIView()
+    private let titleLabel = UILabel()
+    private let descriptionLabel = UILabel()
+    
+    private let imageView = UIImageView()
+    
+    init(viewModel: ArticlesDetailViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -55,7 +38,7 @@ class ArticlesDetailViewController: UIViewController {
     }
 
     private func setupUI() {
-        guard let article = article else {
+        guard let article = viewModel.article else {
             return
         }
 
