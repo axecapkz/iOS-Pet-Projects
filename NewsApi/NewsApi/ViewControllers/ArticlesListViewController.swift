@@ -8,59 +8,74 @@
 import UIKit
 import SnapKit
 
-class ArticlesListViewController: UIViewController {
+class ArticlesListViewController: UICollectionViewController {
     
-    private let tableView = UITableView()
     private let viewModel = ArticlesListViewModel()
+    private var customCollectionView: UICollectionView! // Изменено название свойства
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Articles List"
-        setTableView()
+        
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+        collectionView.backgroundColor = .white
+        collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: "ArticleCell")
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        view.addSubview(collectionView)
+        
         bindViewModel()
         viewModel.fetchArticles()
     }
-    
-    private func setTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "ArticleCell")
-        view.addSubview(tableView)
-        
-        tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-    }
-    
+
     private func bindViewModel() {
-        viewModel.reloadTableViewClosure = { [weak self] in
-            self?.tableView.reloadData()
+        viewModel.reloadCollectionViewClosure = { [weak self] in
+            // Используйте безопасное развертывание collectionView здесь
+            if let collectionView = self?.collectionView {
+                collectionView.reloadData()
+            } else {
+                print("collectionView is nil")
+            }
         }
         viewModel.showErrorClosure = { error in
             print("Error fetching articles: \(error.localizedDescription)")
         }
     }
+    
+    private func createLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 10 // Минимальный отступ между строками
+        layout.minimumInteritemSpacing = 10 // Минимальный отступ между ячейками в одной строке
+
+        let width = (collectionView.bounds.width - 10 * 3) / 2 // Ширина ячейки для двух статей в одной строке
+        let height: CGFloat = 250 // Высота ячейки (можете настроить под свои требования)
+
+        layout.itemSize = CGSize(width: width, height: height) // Устанавливаем размер ячейки
+
+        return layout
+    }
 }
 
-extension ArticlesListViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension ArticlesListViewController {
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.articles.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! CustomTableViewCell
-        let article = viewModel.articles[indexPath.row]
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleCell", for: indexPath) as! CustomCollectionViewCell
+        let article = viewModel.articles[indexPath.item]
         cell.configure(with: article)
         return cell
     }
+}
+
+extension ArticlesListViewController {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailViewModel = ArticlesDetailViewModel()
-        detailViewModel.article = viewModel.articles[indexPath.row]
+        detailViewModel.article = viewModel.articles[indexPath.item]
         let detailViewController = ArticlesDetailViewController(viewModel: detailViewModel)
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
-
-
-
