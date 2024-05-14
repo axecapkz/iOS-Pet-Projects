@@ -107,7 +107,7 @@
 		8141A5D42BE13BDF009D4FAD /* NewsApi */ = {
 			isa = PBXGroup;
 			children = (
-				81B274F22BF31CC700274C38 /* App */,
+				81B274F22BF31CC700274C38 /* Delegates */,
 				81346BBF2BE2393D00A13954 /* ViewControllers */,
 				81346BBD2BE2392900A13954 /* Network */,
 				81B274F12BF31C9D00274C38 /* View */,
@@ -126,7 +126,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		81B274F22BF31CC700274C38 /* App */ = {
+		81B274F22BF31CC700274C38 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
 				8141A5DE2BE13BE1009D4FAD /* Assets.xcassets */,
@@ -134,7 +134,7 @@
 				8141A5D52BE13BDF009D4FAD /* AppDelegate.swift */,
 				8141A5D72BE13BDF009D4FAD /* SceneDelegate.swift */,
 			);
-			path = App;
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		81FEF98E2BF25944006DA2B0 /* ViewModel */ = {
